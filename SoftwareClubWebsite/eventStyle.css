@@ -1,0 +1,162 @@
+/*Css for timeline*/
+/* selects all elements on page and begins with no margin or padding*/
+*{
+    /*padding and margins are not wanted for most elements because it causes the float right and left 
+    to push into each other making the right elements appear farther right*/
+    margin: 0;
+    padding: 0;
+    /*padding and border are included in elemnents dimensions when usually they are not*/
+    box-sizing: border-box;
+}
+.containerForTimeLine {
+    /*vh is relative to 1% of the screen's current height by default <p> tags are roughly 1vh for a reference*/
+    min-height: 100vh;
+    /* % is relative to the parent element which in this case is the <body> tag*/
+    width: 100%;
+
+    /*display:flex increases the size of elements until all of the container is full*/
+    /*It will also shrink elements to fit the screen if they are too large*/
+    display: flex;
+
+    /* will make the elements naturally align in the center unless changed in a more specific element*/
+    align-items: center;
+
+    justify-content: center;
+    
+}
+
+.timeline{
+    /*takes up 80% of its container div*/
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    max-width: 800px;
+    /*all changes will be compared relative to the normal position html position
+    there are other positions like left, center or right*/
+    position: relative;
+}
+
+/*references only unordered lists within timeline id*/
+.timeline ul{
+    /*removes bullet points from list elements*/
+    list-style: none;
+}
+
+.timeline ul li{
+    /*creates a 20px border that pushes the element towards the center away from the sides*/
+    padding: 0;
+    /*the greater the border-radius the more rounded the element
+    em = unit relative to the font size of the element 1/2 * size in pixels of current font
+    */
+    border-radius: 0.5em;
+    /*increases distance between list elements by 20 px vertically*/
+    margin-bottom: 20px;
+    background-color: rgb(236, 236, 236);
+}
+
+/*selects the last list item in the unordered list*/
+.timeline ul li:last-child{
+    /*the page would have a unneeded gap after the last item, so only for the last 
+    element in the list will there be no margin for the bottom*/
+    margin-bottom: 0;
+}
+
+.timeline h3{
+   background-color: rgb(74, 132, 240);
+   color: white;
+}
+.timelineinfo p{
+    color: rgb(94, 91, 91);
+    text-align: left;
+    padding: 10px;
+}
+
+.timeline .date{
+    text-align: center;
+}
+
+/*the timeline in it's normal form will only avaliable if the screen 
+is large enough to display the elements without being super small
+this is around a tablet size which is 760 px*/
+
+/*there are different ways to check the size of a devices screen here 
+only the window of the website screen will be counted
+so if the site is small on a computer it will still look like the mobile 
+version*/
+/*768px = default size for an Ipad or tablet*/
+@media only screen and (min-width:768px) {
+
+    .timeline ul li{
+        /*list items will only take up half of the screen*/
+        width: 50%;
+        /* 50 px spacing between elements*/
+        margin-bottom: 50px;
+        /*all changes will be compared relative to the normal position html position
+    there are other positions like left, center or right*/
+        position: relative;
+    }
+
+    /*to create a staggered effect odd elements will go to the left and even will go to the right*/
+    .timeline ul li:nth-child(odd){
+        /*floating occurs relative to the container here it will go to the left side*/
+        float: left;
+        /*does not allow for any other elements to float to the right side of it
+        creates zig-zag
+        */
+        clear: right;
+        /*moves element 50px to the left so there is more space between line and element*/
+        transform: translateX(-50px);
+        /*rounds edges*/
+        border-radius: 20px;
+    }
+    /*same as above but for evens*/
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(50px);
+        border-radius: 20px;
+    }
+    /* ::before is a Css way to add html elements into html before the tag being referenced*/
+    /*content is '' because it is just a line and has no specific element */
+    .timeline::before{
+        content: '';
+        /*position absolute displays elements relative to the entire screen instead of parent elements*/
+        position: absolute;
+        /*the gray line that is 4px larger*/
+        height: 100%;
+        width: 4px;
+        left: 50%;
+        background-color: rgb(160, 160, 160);
+        transform: translate(-50%);
+    }
+    .timeline ul li::after{
+        content: '';
+        /*position is relative to parent element. Whwereas, relative is changing the position based on default html positioning */
+        position: absolute;
+        height: 20px;
+        width:20px;
+        background-color: rgb(240, 74, 74);
+        /*by giving element a border-radius of 50% it becoms a circle*/
+        border-radius: 50%;
+        /*moves circle to top of box*/
+        top:0;
+    }
+    
+    .timeline ul li:nth-child(odd)::after{
+        /*ball begins in center -- goes 50% to the right now on far right side of object
+        -50% moves the ball from the middle of the list item to the top because as the percentage decreases
+        it gets closer to the relative top of the parent element*/
+        transform: translate(50%,-50%);
+        /* moves the ball 50px to the right from the top right corner of the list element
+       this is to counter act the 50 px each li is moved away from central bar*/
+        right: -50px;
+    }
+
+    .timeline ul li:nth-child(even)::after{
+        /*same procedure as odd list items*/
+        transform: translate(-50%,-50%);
+        left: -50px;
+    }
+    
+}
+

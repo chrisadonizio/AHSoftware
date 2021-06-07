@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AH Software</title>
+        <!--UTF-8 lets special characters show up on website-->
+        <meta charset="UTF-8">
+        <!--link to jquery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--links js file-->
+        <script src = "logic.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!--links CSS sheet-->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    </head>
+    <body>
+        <div id ="intropage">
+        <p>Microsoft Windows [Version 10.0.19042.985]
+            <br>
+            (c) Microsoft Corporation.  All rights reserved.
+            <br>
+            <br> 
+            C:\Users\genericSoftwareClubMember> <span id="title"></span>
+        </p>>
+       
+       <br>
+       <span id = "txtDownload"></span>
+       <progress id="downloading" value="0" max="100"> </progress>
+    
+       <!-- <img id = "comet" src= "comet.gif"></img> -->
+       <br>
+       <!--onlclick waits for the cursor to click the button then it will replace the current window with the about us page-->
+       <button id =  "learnmore" onclick="window.location ='aboutUs.html'">Install</button>
+    </div>
+    </body>
+</html>

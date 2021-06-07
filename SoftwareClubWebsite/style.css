@@ -1,0 +1,50 @@
+body{
+    background-color:black;
+}
+img{
+    
+    width: auto;
+    height: auto;
+    
+}
+
+span{
+    font-size: 6vh;
+    font-size: 6vw;
+}
+button{
+    /* % is determined based on parent element's size if there is none then it is the whole screen*/
+    width: 10%;
+    border: none;
+}
+/*when the cursor comes over the button*/
+button:hover {
+    background-color: rgb(164, 235, 57); 
+    color: white;
+  }
+#title{
+    color: greenyellow;
+    text-align: center;
+    font-size: large;
+}
+#intropage{
+    width: 100%;
+    height: 100%;
+}
+p{
+    color: greenyellow;
+    font-size: large;
+}
+#txtDownload{
+    color: greenyellow;
+    font-size: large;
+}
+#downloading{
+    background: greenyellow;
+}
+/*  the webkit is a CSS extension for Safari/Chrome that allows for more customization of certain HTML elements like progress bars
+    Normally you could only have a normal green and not a yellow green
+*/
+progress::-webkit-progress-value {
+    background: greenyellow;
+  }

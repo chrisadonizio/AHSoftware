@@ -1,0 +1,79 @@
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}
+.aboutImg{
+    /* % is relative to parent elements size in most cases is a column or countainer*/
+    width: 90%;
+    /* height auto has the height scale relative to width to prevent distortions in the image*/   
+    height: auto;
+}
+
+#maindescript{
+    font-size: large;
+}
+
+.largeComet{
+    /*explained in aboutImg */
+    width:60%;
+    height: auto;
+    position: relative;
+}
+
+/*added css class so all non-text elements that need to be centered are added under this class*/ 
+.centerImg{
+        /*block makes the element take the whole width of its parent object*/
+        display: block;
+        /*margin-right/left makes it split the difference between being to the left/right of the block*/
+        margin:auto; 
+}
+
+.contact{
+    /*adds more space to the top of the form*/
+    margin-top: 3%;
+    /*creates a space inbetween border and html elements*/
+    padding:10px;
+
+    border-style:solid;
+    border-width: 0.75px;
+    border-color: rgb(247, 247, 247);
+}
+
+/*class:hover will manage the Css when the cursor is over an element*/
+.card:hover{
+    /* increases size of card element and all children of that element by 105% so 5% larger than itself*/
+    transform:scale(1.05);
+} 
+
+
+/* CSS for instructions page*/
+.icon{
+    width: 40%;
+    /*scales height relative to width to prevent distortions*/
+    height: auto;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*Css to make form responsive*/
+
+/*when the screen gets too big it stretches the contact us form so when it's at least 992px the following code is executed*/
+@media only screen and (min-width: 992px){
+    /*changes the contact form attriube so that only the left and right padding increase to 17.5% of the container surface*/
+    .contact{
+        margin-left: 17.5%;
+        margin-right: 17.5%;
+
+        }    
+      }

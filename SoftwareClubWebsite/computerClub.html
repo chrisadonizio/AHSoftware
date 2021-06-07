@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Computer Club</title>
+  <!--link to defined bootstrap css classes-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--link to jquery library-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--link to bootstrap jquery functions -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--link to my style sheet-->
+  <link rel="stylesheet" href="mainpages.css">
+
+<body>
+  <!--declaration for a navbar which contains a unordered list which will link to other parts of the site-->
+  <!--navbar-expand-lg makes the navbar go verticle once the screen reaches a smaller size than large (1200px)-->
+  <!--bg-light makes the background the default light theme same purpose for navbar-light which changes the style
+    of the other elements i.e. links to other pages-->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <!--navbar-brand = class that moves the content to the left and makes it larger than other elements-->
+    <a class="navbar-brand" href="index.html">AH Software<img style="width: 40px; height: 40px;"
+        src="comet Software Club.png"></img></a>
+    <!--navbar toggler will execute the data-toggle command to "collapse" the nav bar when it reaches a size less than a larger screen 1200px (large) the button is
+      activated for the elements within an id of mainNav-->
+    <button type="button" class="navbar-toggler" data-target="#mainNav" data-toggle="collapse">
+      <!--toggler-icon class is a bootstrap class that has the three bars display as an image for the button within a span.
+          span = the equivalent of a div but by default is inline so other elements may appear next to it-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--id corresponds to target from button includes all of the nav except the button and brand-->
+    <div id="mainNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs.html">About Us</a>
+        </li>
+        <!--class that lets you create a series of links with a dropdown-->
+        <li class="nav-item dropdown">
+          <!--data-toggleclass responds to a mouse click to show hidden links-->
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+            Departments
+          </a>
+          <div class="dropdown-menu">
+            <!--similar concept to nav item but instead for the elements of the dropdown-->
+            <a class="dropdown-item" href="computerClub.html">Computer Club</a>
+            <a class="dropdown-item" href="https://www.steelcitycodes.org/">Steel City Codes</a>
+            <a class="dropdown-item" href="gameCreation.html">Game Creation</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="members.html">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactUs.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--bootstrap class manages all html elements as a parent element 
+        it creates a border so no elements are too close to the edge unless its mobile-->
+  <div class="container">
+    <h1>Computer Club</h1>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>About Us</h2>
+        <p>The Computer club is a subsidiary of the Software Club. Just like our parent organization, we are based out
+          of Abington Heights High School. Our goal is to collect unused, old, or retired computers and convert them
+          into a usable product which we then donate to people/organizations who otherwise wouldn't be able to acquire
+          them.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="computer icon.png" class = "centerImg icon" id = "computerClub" ></img>
+      </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Drop-Off Locations</h3>
+          <ul>
+            <li>In-person students: Bring donations to Dr. William's room (510) and say it is for Computer Club.
+            </li>
+            <li>
+              Virtual students/General Public: Email ahsoftwareclub@gmail.com to organize a contactless pick-up from
+              your house or a safe location.
+            </li>
+            <li>
+              More drop-off locations coming soon!</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Drop-Off Instructions</h3>
+          <ul>
+            <li>If you are dropping off a computer, please limit handling of computer parts to limit the possibility of COVID-19 spread.
+            </li>
+            <li>
+              If our team is picking up a donation, we will not enter your home to pick up donations and we ask that you please respect health guidelines if you are interacting with our members. Please have all donations outside or in an exterior section of your home for our member to pick-up.
+            </li>
+          </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Desired Donations</h3>
+              <p style="text-align: left;">Though we graciously accept all donations, we are in dire need for the following computer donations:</p>
+              <ul>
+                <li>Hard drives</li>
+                <li>Graphics Cards</li>
+                <li>Monitors</li>
+                <li>Fully/Partially Built Computers</li>  
+              </ul>
+          </div>
+          </div>
+</body>
+
+</html>

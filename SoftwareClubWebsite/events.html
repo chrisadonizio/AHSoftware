@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="mainpages.css">
+  <link rel="stylesheet" href="eventStyle.css">
+  <!--link to defined bootstrap css classes-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--link to jquery library-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--link to bootstrap jquery functions -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Events</title>
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+  <!--declaration for a navbar which contains a unordered list which will link to other parts of the site-->
+  <!--navbar-expand-lg makes the navbar go verticle once the screen reaches a smaller size than large (1200px)-->
+  <!--bg-light makes the background the default light theme same purpose for navbar-light which changes the style
+    of the other elements i.e. links to other pages-->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <!--navbar-brand = class that moves the content to the left and makes it larger than other elements-->
+    <a class="navbar-brand" href="index">AH Software<img style="width: 40px; height: 40px;"
+        src="comet Software Club.png"></img></a>
+    <!--navbar toggler will execute the data-toggle command to "collapse" the nav bar when it reaches a size less than a larger screen 1200px (large) the button is
+      activated for the elements within an id of mainNav-->
+    <button type="button" class="navbar-toggler" data-target="#mainNav" data-toggle="collapse">
+      <!--toggler-icon class is a bootstrap class that has the three bars display as an image for the button within a span.
+          span = the equivalent of a div but by default is inline so other elements may appear next to it-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--id corresponds to target from button includes all of the nav except the button and brand-->
+    <div id="mainNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs.html">About Us</a>
+        </li>
+        <!--class that lets you create a series of links with a dropdown-->
+        <li class="nav-item dropdown">
+          <!--data-toggleclass responds to a mouse click to show hidden links-->
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+            Departments
+          </a>
+          <div class="dropdown-menu">
+            <!--similar concept to nav item but instead for the elements of the dropdown-->
+            <a class="dropdown-item" href="computerClub.html">Computer Club</a>
+            <a class="dropdown-item" href="https://www.steelcitycodes.org/">Steel City Codes</a>
+            <a class="dropdown-item" href="gameCreation.html">Game Creation</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="members.html">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactUs.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <h1 style="color: rgb(43, 42, 42);"><u>Timeline of Our Events</u></h1>
+  <br>
+  <br>
+  <div class="containerForTimeLine">
+    <div class="timeline">
+      <!--ul stands for unordered list (meaning they are not numbered)-->
+      <ul>
+        <!-- li holds an individual portion of a list (list item)-->
+        <li>
+          <!--timeline info is used later in css-->
+          <div class="timelineinfo">
+            <!--The larger the h element the smaller the heading-->
+            <h3>Steel City Codes</h3>
+            <!--date is modified in css-->
+            <h5 class="date">7/22/20 - Present</h5>
+            <p> "We offer educational opportunities to elementary and middle school students through after-school
+              programs and summer camps. All of our offerings are cost-free, so that any student—regardless of their
+              socioeconomic background—is able to take advantage of our opportunities."
+              <br>
+              <br>
+              Braeden M. and Chris A. are Chapter Heads of Abington and Michael R. and Sydney V. are regional directors
+              of the Scranton-Wilkes Barre area.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timelineinfo">
+            <h3>PekoeCTF (2021)</h3>
+            <h5 class="date">5/11/21 - 5/21/21</h5>
+            <p>"PekoeCTF is a CTF created and run by the members of the Darien High School Programming Club. PekoeCTF
+              2020 was our first time of hopefully many times running a CTF. CTFs, short for capture-the-flag
+              competitions, are a type of online programming and cybersecurity competition in which participants solve
+              computer science problems to earn points. Each problem is “solved” by finding its hidden flag, a string of
+              text that looks something like pekoe{sample_flag_123abc}."
+              <br>
+              <br>
+              Michael R, Evan C, Chris A, Nate M, Max L participated in this event.
+              <br>
+              <br>
+              We placed 10th out of 34 teams.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timelineinfo">
+            <h3>Beginners Circle Jam #4</h3>
+            <h5 class="date">11/27/20 - 12/11/20</h5>
+            <p>"The goal of this game jam is to bring together a group of beginners to form the next best start-up
+              community on itch.io. One full of positive, like-minded individuals of all walks of life who work to make
+              each other better within a comfortable environment. Although there will be motivating prizes, this jam
+              will not focus on winning, but rather helping each other to improve our skills; a game jam where we can
+              work together to help participants go from Level 1 to Level 99."
+              <br>
+              <br>
+              Here is the link to our final game: <a
+                href="https://potentialerror.itch.io/animal-guide">https://potentialerror.itch.io/animal-guide</a>
+              <br>
+              <br>
+              Michael R, Evan C, Brian R, Chris A, John L, Braeden M, Kevin D, Tyler B participated in this event.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timelineinfo">
+            <h3>Steel City Hacks</h3>
+            <h5 class="date">8/21/20 - 8/23/20</h5>
+            <p>"Steel City Hacks is a free, 48-hour, online hackathon for middle and high school students. Through Steel
+              City Hacks, we hope to encourage middle and high school students to use computer science to engage with
+              their community and devise solutions to a variety of problems. All students are encouraged to participate
+              regardless of skill level. Throughout the competition, we will be holding various workshops and seminars
+              for interested students to build their proficiency in a variety of frameworks/services and meet and
+              connect with students of similar interests. We will also have industry professionals available to mentor
+              and guide you along the way, so no experience is required."
+              <br>
+              <br>
+              Michael R. and Chris A. organized a Github workshop and acted as mentors.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timelineinfo">
+            <h3>GMTK Game Jam</h3>
+            <h5 class="date">7/10/20 - 7/12/20</h5>
+            <p>
+              "Game Maker's Toolkit is a video game analysis series created and presented by Mark Brown, a British video
+              game journalist. The show examines and explains various aspects of video game design and is supposed to
+              help viewers consider the design of games that they play and to encourage developers to improve their
+              craft." This is the biggest game jam in Itch.io history!
+              <br>
+              <br>
+              Here is the link to our final game: <a
+                href="https://potentialerror.itch.io/haywire">https://potentialerror.itch.io/haywire</a>
+              <br>
+              <br>
+              Michael R, Evan C, Sydney V, Chris A, Braeden M, Kevin D participated in this event.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timelineinfo">
+            <h3>American Computer Science League</h3>
+            <h5 class="date">12/13/18 - 4/30/20</h5>
+            <p>
+              "ACSL organizes computer science contests and computer programming contests for elementary, junior, and senior high school students. This year, our 41st year of continuous operation, over 300 teams in the United States, Canada, Europe, Africa and Asia are participating in various divisions. ACSL is on the approved activities list of the National Association of Secondary School Principals (NASSP). ACSL is also an institutional member of the Computer Science Teachers Association."
+              <br>
+              <br>
+Dominick D, Tony F, Varun I, Robby H, Harrison F, Michael R, Evan C, Sydney V, Braeden M, Stephan T, and George C participated in this event.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="timelineinfo">
+            <h3>TeenHacks LI</h3>
+            <h5 class="date">5/25/19</h5>
+            <p>
+              "Calling all programmers, designers, makers and leaders! TeenHacks LI is Long Island’s premier 24-hour high school hackathon, by students, for students. Take part in group collaboration, interesting workshops, sweet prizes, and more. Get ready to meet new people and have an amazing time. Join us as we build the future!"
+              <br>
+              <br>
+              Dominick D, Tony F, Varun I, and Braeden M participated in this event.
+              </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
